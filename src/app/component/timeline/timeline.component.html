@@ -1,0 +1,649 @@
+<section
+  (click)="closeDisplay($event)"
+  class="dark:bg-[#1C1C1D] overflow-hidden"
+>
+  <nav
+    class="bg-white border-gray-200 dark:bg-[#1C1C1D] dark:border dark:border-b dark:border-gray-700"
+  >
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    >
+      <a class="flex items-center space-x-3 rtl:space-x-reverse">
+        <i
+          class="fa-brands fa-facebook text-blue-600 font-logo dark:text-white"
+        ></i>
+        <h1 class="text-blue-600 font-bold font-logo dark:text-white">
+          {{ "navbar.facebook" | translate }}
+        </h1>
+      </a>
+      <button
+        (click)="togglevav()"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:bg-gray-100"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
+      <div
+        #navtoogle
+        class="hidden w-full md:block md:w-3/4 items-center"
+        id="navbar-solid-bg"
+      >
+        <ul
+          class="flex flex-col items-center font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:justify-between md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700"
+        >
+          <li (click)="closenavdiv()" class="my-2 text-center">
+            <a
+              ><i
+                class="text-gray-600 dark:text-gray-400 fa-solid fa-house"
+              ></i>
+            </a>
+          </li>
+          <li (click)="closenavdiv()" class="my-2 text-center">
+            <a
+              ><i
+                class="text-gray-600 dark:text-gray-400 fa-solid fa-user-group"
+              ></i
+            ></a>
+          </li>
+          <li (click)="closenavdiv()" class="my-2 text-center">
+            <a
+              ><i
+                class="text-gray-600 dark:text-gray-400 fa-brands fa-square-youtube"
+              ></i
+            ></a>
+          </li>
+          <li (click)="closenavdiv()" class="my-2 text-center">
+            <a
+              ><i class="text-gray-600 dark:text-gray-400 fa-solid fa-store"></i
+            ></a>
+          </li>
+          <li (click)="closenavdiv()" class="my-2 text-center">
+            <a
+              ><i
+                class="text-gray-600 dark:text-gray-400 fa-solid fa-user-group"
+              ></i
+            ></a>
+          </li>
+          <li
+            #lista
+            class="my-2 text-center block dark:text-white px-3 py-1 rounded-lgbg-slate-600 relative lista"
+          >
+            <button
+              #lista
+              (click)="display()"
+              class="text-white dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-blue-900 font-medium rounded-lg text-sm lista border border-gray-600 p-1"
+              type="button"
+            >
+              <p
+                #lista
+                class="lista border-b border-slate-700 dark:border-gray-50 pb-1"
+              >
+                <i #lista class="fa-solid fa-circle-user mx-auto lista"></i>
+              </p>
+              <p #lista class="font-bold">
+                <i
+                  #lista
+                  class="fa-solid fa-chevron-down fa-lg dark:text-white text-gray-800 lista"
+                ></i>
+              </p>
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              #lista
+              #dropdownMe
+              id="dropdownMe"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 ltr:top-2/3 ltr:right-2/3 rtl:left-2/3 rtl:top-2/3 lista"
+            >
+              <ul
+                #lista
+                class="py-2 text-sm text-gray-700 dark:text-gray-200 lista"
+              >
+                <li
+                  (click)="closenavdiv()"
+                  #lista
+                  routerLink="/user"
+                  class="lista"
+                >
+                  <a
+                    #lista
+                    class="dark:text-white hover:bg-slate-200 dark:hover:bg-gray-600 w-full border-b dark:border-gray-600 p-1 flex justify-start items-center lista"
+                  >
+                    @if (userPhoto) {<img
+                      #lista
+                      class="rounded-full w-[40px] lista"
+                      [src]="userPhoto"
+                      alt="user photo"
+                    />}
+                    <h5 #lista class="mx-1 lista">
+                      {{ userName }}
+                    </h5></a
+                  >
+                </li>
+                <li
+                  #lista
+                  class="block dark:text-white rounded-lgbg-slate-600 relative lista py-1"
+                >
+                  <button
+                    #lista
+                    (click)="displayNo2()"
+                    class="dark:text-white hover:bg-slate-200 dark:bg-salte-700 dark:hover:bg-slate-600 font-medium text-sm flex items-center justify-between lista w-full py-2"
+                    type="button"
+                  >
+                    <h4
+                      #lista
+                      class="mx-2 lista flex items-center justify-start"
+                    >
+                      <h5 #lista class="lista">
+                        {{ "navbar.setting" | translate }}
+                      </h5>
+                    </h4>
+                    <span #lista class="font-bold mx-2">
+                      @if(LangText()){
+                      <i
+                        #lista
+                        class="fa-solid fa-chevron-left fa-lg dark:text-white text-gray-800 lista"
+                      ></i>
+                      } @else if(LangText()==false){
+                      <i
+                        #lista
+                        class="fa-solid fa-chevron-right fa-lg dark:text-white text-gray-800 lista"
+                      ></i>
+                      }
+                    </span>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    #lista
+                    #dropdownMe2
+                    id="dropdownMe2"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 lista ltr:top-0 ltr:right-0 rtl:left-0 rtl:top-0"
+                  >
+                    <ul
+                      #lista
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200 lista"
+                    >
+                      <li
+                        #lista
+                        (click)="back()"
+                        class="dark:text-white hover:bg-slate-200 dark:hover:bg-gray-600 w-full border-b dark:border-gray-600 p-2 flex justify-start items-center lista"
+                      >
+                        <span #lista class="font-bold mx-2">
+                          @if(LangText()==false){
+                          <i
+                            #lista
+                            class="fa-solid fa-chevron-left fa-lg dark:text-white text-gray-800 lista"
+                          ></i>
+                          } @else if(LangText()){
+                          <i
+                            #lista
+                            class="fa-solid fa-chevron-right fa-lg dark:text-white text-gray-800 lista"
+                          ></i>
+                          }
+                        </span>
+                        <h5 #lista class="lista">
+                          {{ "navbar.setting" | translate }}
+                        </h5>
+                      </li>
+                      <li #lista class="lista">
+                        <button
+                          #lista
+                          (click)="display1()"
+                          id="doubleDropdownButton1"
+                          type="button"
+                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white lista"
+                        >
+                          {{ "navbar.lang" | translate
+                          }}<span #lista class="font-bold">
+                            @if(LangText()){
+                            <i
+                              #lista
+                              class="fa-solid fa-chevron-left fa-lg dark:text-white text-gray-800 lista"
+                            ></i>
+                            } @else if(LangText()==false){
+                            <i
+                              #lista
+                              class="fa-solid fa-chevron-right fa-lg dark:text-white text-gray-800 lista"
+                            ></i>
+                            }
+                          </span>
+                        </button>
+                        <div
+                          #lista
+                          #doubleDropdown1
+                          id="doubleDropdown1"
+                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 lista ltr:top-2/3 ltr:left-2/3 rtl:right-2/3 rtl:top-2/3"
+                        >
+                          <ul
+                            #lista
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200 lista"
+                          >
+                            <li
+                              (click)="closenavdiv()"
+                              [class.bg-primary-subtle]="
+                                _TranslateService.currentLang == 'ar'
+                              "
+                              (click)="lang('ar')"
+                            >
+                              <a
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >{{ "navbar.Arabic" | translate }}</a
+                              >
+                            </li>
+                            <li
+                              (click)="closenavdiv()"
+                              [class.bg-primary-subtle]="
+                                _TranslateService.currentLang == 'en'
+                              "
+                              (click)="lang('en')"
+                            >
+                              <a
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >{{ "navbar.English" | translate }}</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li #lista class="lista">
+                        <button
+                          #lista
+                          (click)="display2()"
+                          id="doubleDropdownButton2"
+                          type="button"
+                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white lista"
+                        >
+                          {{ "navbar.dark mode" | translate
+                          }}<span #lista class="font-bold">
+                            @if(LangText()){
+                            <i
+                              #lista
+                              class="fa-solid fa-chevron-left fa-lg dark:text-white text-gray-800 lista"
+                            ></i>
+                            } @else if(LangText()==false){
+                            <i
+                              #lista
+                              class="fa-solid fa-chevron-right fa-lg dark:text-white text-gray-800 lista"
+                            ></i>
+                            }
+                          </span>
+                        </button>
+                        <div
+                          #lista
+                          #doubleDropdown2
+                          id="doubleDropdown2"
+                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 lista ltr:top-2/3 ltr:left-2/3 rtl:right-2/3 rtl:top-2/3"
+                        >
+                          <ul
+                            #lista
+                            class="py-2 text-sm text-gray-700 dark:text-gray-200 lista"
+                          >
+                            <li (click)="closenavdiv()" (click)="lightMoode()">
+                              <a
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >{{ "navbar.off" | translate }}</a
+                              >
+                            </li>
+                            <li (click)="closenavdiv()" (click)="dark()">
+                              <a
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >{{ "navbar.on" | translate }}</a
+                              >
+                            </li>
+                            <li (click)="closenavdiv()" (click)="system()">
+                              <a
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >{{
+                                  "navbar.Use System Setting" | translate
+                                }}</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li
+                        (click)="closenavdiv()"
+                        #lista
+                        class="lista"
+                        routerLink="/ChangePassword"
+                      >
+                        <button
+                          #lista
+                          type="button"
+                          class="w-full px-4 text-start py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white lista"
+                        >
+                          {{ "user.Change Password" | translate }}
+                        </button>
+                      </li>
+                      <li
+                        (click)="closenavdiv()"
+                        #lista
+                        class="lista"
+                        routerLink="/ProfileImage"
+                      >
+                        <button
+                          #lista
+                          type="button"
+                          class="w-full px-4 text-start py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white lista"
+                        >
+                          {{ "user.Profile Picture" | translate }}
+                        </button>
+                      </li>
+                      <li #lista (click)="logout()" class="mb-0 lista">
+                        <a
+                          #lista
+                          class="block px-4 py-2 text-red-600 hover:bg-red-700 hover:text-white lista border-t dark:border-gray-600"
+                          >{{ "navbar.logout" | translate }}</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li #lista (click)="logout()" class="mb-0 lista">
+                  <a
+                    #lista
+                    class="block px-4 py-2 text-red-600 hover:bg-red-700 hover:text-white lista border-t dark:border-gray-600"
+                    >{{ "navbar.logout" | translate }}</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main
+    infiniteScroll
+    [infiniteScrollThrottle]="50"
+    [infiniteScrollDistance]="0.1"
+    (scrolled)="onScrollDown()"
+    class="scroll-container overflow-hidden lg:w-1/3 mx-auto my-3 flex flex-col gap-5 dark:bg-[#1C1C1D] dark:border dark:border-black dark:px-3 dark:shadow-md"
+  >
+    <!-- creat post  -->
+    <!-- Modal toggle -->
+    <div
+      class="creat-post bg-white p-5 rounded-md flex items-center dark:bg-[#1C1C1D] dark:shadow-2xl"
+    >
+      <span routerLink="/user" class="mx-1"
+        ><i class="fa-regular fa-circle-user"></i
+      ></span>
+      <input
+        readonly
+        (click)="showcreatemodal()"
+        type="text"
+        data-modal-target="authentication-modal"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-[#1C1C1D] dark:border-gray-700"
+        placeholder="{{ 'authenmodal.what`s on your mind' | translate }}, {{
+          userName
+        }} {{ 'authenmodal.?' | translate }}"
+      />
+    </div>
+    <!-- Main modal -->
+    <div
+      id="authentication-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      data-modal-backdrop="static-modal"
+      class="hidden bg-dark overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="w-3/4 relative p-4 md:w-1/2 max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              {{ "authenmodal.Add New Post" | translate }}
+            </h3>
+            <button
+              (click)="hiddencreatemodal()"
+              type="button"
+              class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5">
+            <div class="space-y-4">
+              <!-- textarea -->
+              <textarea
+                [(ngModel)]="content"
+                name="content"
+                id="content"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                placeholder="{{
+                  'authenmodal.write your thoughts here' | translate
+                }}"
+              ></textarea>
+              <!--upload file  -->
+              <div class="flex items-center justify-center w-full">
+                <label
+                  for="dropzone-file"
+                  class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                >
+                  <div
+                    class="flex flex-col items-center justify-center pt-5 pb-6"
+                  >
+                    <svg
+                      class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 16"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                      />
+                    </svg>
+                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                      <span class="font-semibold">{{
+                        "authenmodal.Click to upload or drag and drop"
+                          | translate
+                      }}</span>
+                    </p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      SVG, PNG, JPG or GIF (MAX. 800x400px)
+                    </p>
+                  </div>
+                  <input
+                    #createInput
+                    (change)="changefile($event)"
+                    id="dropzone-file"
+                    type="file"
+                    class="hidden"
+                  />
+                </label>
+              </div>
+              <!-- add button -->
+              <button
+                (click)="creatPost()"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full block py-2.5 text-center"
+              >
+                {{ "authenmodal.Post" | translate }}
+              </button>
+            </div>
+            @if (messgerror) {
+            <p
+              class="text-center bg-red-200 rounded text-red-700 p-3 my-2 w-1/2 mx-auto"
+              role="alert"
+            >
+              {{ messgerror }}
+            </p>
+            } @if (messsuccess) {
+            <p
+              class="text-center bg-green-200 rounded text-green-700 p-3 my-2 w-1/2 mx-auto"
+              role="alert"
+            >
+              {{ messsuccess }}
+            </p>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- user posts create post -->
+    @if (userPosts) {
+    <article
+      class="search-results one-post bg-white py-5 rounded-md flex flex-col dark:bg-[#1C1C1D] dark:border dark:border-b dark:border-gray-700"
+    >
+      <div class="px-5 pb-5">
+        <!-- header -->
+        <div class="title flex items-center gap-5">
+          <img
+            routerLink="/user"
+            (click)="open(userPosts.user.photo)"
+            class="w-10 h-10 rounded-full"
+            [src]="userPosts.user.photo"
+            alt="user profile"
+          />
+          <div class="user-data">
+            <h3 class="font-bold dark:text-white">{{ userPosts.user.name }}</h3>
+            <p class="font-light text-gray-700 font-p dark:text-gray-200">
+              {{ userPosts.createdAt | date }}
+            </p>
+          </div>
+          <div class="menu ms-auto">
+            <span>
+              <i class="fa-solid fa-ellipsis dark:text-gray-200"></i
+            ></span>
+          </div>
+        </div>
+        <!--decription  -->
+        @if (userPosts.body) {
+        <p class="dark:text-white py-3">{{ userPosts.body }}</p>
+        }
+        <!-- image -->
+        @if (userPosts.image) {
+        <img
+          (click)="open(userPosts.image)"
+          [src]="userPosts.image"
+          class="w-full rounded-md"
+          alt="post image"
+        />}
+      </div>
+      <button
+        #showComments
+        class="text-blue-600 self-start w-full text-center border-t border-gray-500 pt-3"
+      >
+        {{ "authenmodal.Show Comments" | translate }}
+      </button>
+      <!-- allcomments -->
+      @defer (on interaction(showComments)) {
+      <app-comments [postId]="userPosts.id"></app-comments>
+      } @loading {
+      <h2 class="text-center text-teal-500">
+        {{ "authenmodal.Loading" | translate }}.......
+      </h2>
+      }
+    </article>
+    }
+    <!-- all posts -->
+    @for (post of postList; track post.id) {
+    <article
+      class="search-results one-post bg-white py-5 rounded-md flex flex-col dark:bg-[#1C1C1D] dark:border dark:border-b dark:border-gray-700"
+    >
+      <div class="px-5 pb-5">
+        <!-- header -->
+        <div class="title flex items-center gap-5">
+          <img
+            (click)="open(post.user.photo)"
+            class="w-10 h-10 rounded-full"
+            [src]="post.user.photo"
+            alt="user profile"
+          />
+          <div class="user-data">
+            <h3 class="font-bold dark:text-white">{{ post.user.name }}</h3>
+            <p class="font-light text-gray-700 font-p dark:text-gray-200">
+              {{ post.createdAt | date }}
+            </p>
+          </div>
+          <div class="menu ms-auto">
+            <span>
+              <i class="fa-solid fa-ellipsis dark:text-gray-200"></i
+            ></span>
+          </div>
+        </div>
+        <!--decription  -->
+        @if (post.body) {
+        <p class="dark:text-white py-3">{{ post.body }}</p>
+        }
+        <!-- image -->
+        @if (post.image) {
+        <img
+          (click)="open(post.image)"
+          [src]="post.image"
+          class="w-full rounded-md"
+          alt="post image"
+        />}
+      </div>
+      <button
+        #showComments
+        (click)="showHiddenComment(post.id)"
+        class="text-blue-600 self-start w-full text-center border-t pt-3"
+      >
+        {{ "authenmodal.Show Comments" | translate }}
+      </button>
+      <!-- allcomments -->
+      @defer (on interaction(showComments)) {
+      <app-comments [postId]="post.id"></app-comments>
+      } @loading {
+      <h2 class="text-center text-slate-800 dark:text-white">
+        {{ "authenmodal.Loading" | translate }}.......
+      </h2>
+      }
+    </article>
+    }
+  </main>
+  <section>
+    @if (ischeecked==true) {
+    <div
+      #light
+      (click)="ligthfunc($event)"
+      class="light flex items-center justify-center"
+    >
+      <img
+        class="border border-white"
+        [src]="theCurentImg"
+        width="600px"
+        alt="the portfolio image"
+      />
+    </div>
+    }
+  </section>
+</section>

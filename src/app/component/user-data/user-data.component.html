@@ -1,0 +1,581 @@
+<section (click)="closehidden($event)" class="dark:bg-[#1C1C1D] w-[100%]">
+  <section
+    class="w-full container mx-auto relative md:w-3/4 dark:bg-[#1C1C1D] dark:border-black dark:px-3 dark:shadow-md"
+  >
+    <div class="big-image bg-gray-950">
+      <div class="user-big-image">
+        @if (userdata) {
+        <img
+          (click)="open(userdata.photo)"
+          class="w-full h-80"
+          [src]="userdata.photo"
+          [alt]="userdata.name"
+        />
+        }
+      </div>
+    </div>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 px-8 p-5">
+      <div
+        class="flex flex-wrap justify-between items-center max-w-screen-xl ms-44"
+      >
+        <a class="flex items-center space-x-3 rtl:space-x-reverse">
+          @if (userdata) {
+          <img
+            routerLink="/ProfileImage"
+            [src]="userdata.photo"
+            [alt]="userdata.name"
+            class="image-width absolute top-64 left-10 rtl:right-10"
+          />
+          }
+          <div
+            class="user-data self-center font-semibold whitespace-nowrap dark:text-white"
+          >
+            @if (userdata) {
+            <h2 class="font-bold text-2xl dark:text-white">
+              {{ userdata.name }}
+            </h2>
+            }
+            <p class="font-light text-gray-700 text-sm dark:text-white">
+              {{ "user.0 Freinds" | translate }}
+            </p>
+          </div>
+        </a>
+        <ul
+          class="flex items-center justify-between space-x-3 rtl:space-x-reverse mt-3 md:mt-0"
+        >
+          <li>
+            <a>
+              <button
+                type="button"
+                class="text-white fonts bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:text-white"
+              >
+                {{ "user.AddStory" | translate }}
+              </button>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <button
+                type="button"
+                class="text-black fonts bg-gray-100 hover:bg-gray-200 focus:outline-none rounded-lg w-full sm:w-auto px-3 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:text-white"
+              >
+                {{ "user.EditProfile" | translate }}
+              </button>
+            </a>
+          </li>
+          <li>
+            <a>
+              <button
+                type="button"
+                class="text-black fonts bg-gray-100 hover:bg-gray-200 focus:outline-none rounded-lg w-full sm:w-auto px-3 py-1 font-light text-center dark:bg-gray-600 dark:hover:bg-gray-700"
+              >
+                <i class="fa-solid fa-caret-down text-sm"></i>
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="bg-gray-50 dark:bg-gray-700">
+      <div class="max-w-screen-xl px-4 py-3 mx-auto">
+        <div class="flex items-center justify-between">
+          <ul
+            class="flex flex-row items-center w-1/2 justify-between mt-0 rtl:space-x-reverse text-sm"
+          >
+            <li>
+              <a
+                class="text-gray-900 dark:text-white fonts"
+                routerLink="/user"
+                routerLinkActive="active "
+                >{{ "user.Posts" | translate }}</a
+              >
+            </li>
+            <li>
+              <a class="text-gray-900 dark:text-white fonts hidden md:block">{{
+                "user.About" | translate
+              }}</a>
+            </li>
+            <li>
+              <a class="text-gray-900 dark:text-white fonts hidden md:block">{{
+                "user.Friends" | translate
+              }}</a>
+            </li>
+            <li>
+              <a class="text-gray-900 dark:text-white fonts hidden md:block">{{
+                "user.Photos" | translate
+              }}</a>
+            </li>
+            <li>
+              <a class="text-gray-900 dark:text-white fonts hidden lg:block">{{
+                "user.Vedios" | translate
+              }}</a>
+            </li>
+            <li>
+              <a class="text-gray-900 dark:text-white fonts hidden lg:block">{{
+                "user.Reals" | translate
+              }}</a>
+            </li>
+            <li>
+              <a class="text-gray-900 dark:text-white fonts hidden lg:block">
+                {{ "user.More" | translate }}
+                <i class="fa-solid fa-caret-down text-sm"></i>
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="flex flex-row items-center justify-end w-1/2 mt-0 rtl:space-x-reverse text-sm"
+          >
+            <li routerLink="/ChangePassword">
+              <a class="text-blue-400 fonts mx-5">
+                {{ "user.Change Password" | translate }}
+              </a>
+            </li>
+            <li (click)="logout()">
+              <a class="text-rose-400 fonts mx-5">
+                {{ "user.Logout" | translate }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="grid md:grid-cols-2 gap-4 mt-5">
+      <div class="user-intro-photos">
+        <div
+          class="intro px-5 p-2 rounded-lg bg-white dark:bg-[#1C1C1D] dark:border dark:border-gray-700"
+        >
+          <h3 class="font-bold my-2 dark:text-white text-lg">intro</h3>
+          <p class="my-2 dark:text-white">
+            {{
+              "user.Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+                | translate
+            }}
+          </p>
+          <hr />
+          <p class="my-2 dark:text-white">
+            {{
+              "user.worked at Lorem, ipsum. Went to lorem secondary school for girls.cario."
+                | translate
+            }}
+          </p>
+          <p class="my-2 dark:text-white">
+            <i class="fa-solid fa-heart text-sm mx-1"></i>
+            {{ "user.single" | translate }}.
+          </p>
+          <p class="hover:text-blue-600 my-2 dark:text-white">
+            <i class="fa-brands fa-instagram font-light text-sm mx-1"></i>
+            @if (userdata) {
+            {{ userdata.name }}_instagram }
+          </p>
+        </div>
+        <div
+          class="photos px-5 p-2 mt-5 rounded-lg bg-white py-2 dark:bg-[#1C1C1D] dark:border dark:border-gray-700"
+        >
+          <h3 class="font-bold my-2 text-lg dark:text-white">
+            {{ "user.Photos" | translate }}
+          </h3>
+          <div class="flex items-center flex-wrap overflow-hidden gap-2">
+            @if (userdata) {
+            <img
+              (click)="open(userdata.photo)"
+              class="w-[150px] p-2 rounded-xl shadow-lg border border-zinc-400"
+              [src]="userdata.photo"
+              [alt]="userdata.name"
+            />
+            } @if (userPosts) { @for (item of userPosts; track item.id) { @if
+            (item.image) {
+            <img
+              (click)="open(item.image)"
+              class="w-[150px] p-2 rounded-xl shadow-lg border border-zinc-400"
+              [src]="item.image"
+              alt="post image"
+            />
+            } } }
+          </div>
+        </div>
+      </div>
+      <!-- posts -->
+      <div class="user-posts">
+        <!-- creat post  -->
+        <div
+          class="creat-post mb-5 bg-white p-5 rounded-md dark:bg-[#1C1C1D] dark:border dark:border-gray-700"
+        >
+          <!-- Modal toggle -->
+          @if (userdata) {
+          <input
+            readonly
+            (click)="showcreatemodal()"
+            type="text"
+            data-modal-target="authentication-modal"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-[#1C1C1D] dark:text-white"
+            placeholder="{{ 'authenmodal.what`s on your mind' | translate }}, {{
+              userdata.name
+            }} {{ 'authenmodal.?' | translate }}"
+          />
+          }
+          <!-- Main modal -->
+          <div
+            id="authentication-modal"
+            tabindex="-1"
+            aria-hidden="true"
+            data-modal-backdrop="static-modal"
+            class="bg-dark hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 bottom-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          >
+            <div class="relative p-4 w-1/2 max-h-full">
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div
+                  class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                >
+                  <h3
+                    class="text-xl font-semibold text-gray-900 dark:text-white"
+                  >
+                    {{ "authenmodal.Add New Post" | translate }}
+                  </h3>
+                  <button
+                    (click)="hiddencreatemodal()"
+                    type="button"
+                    class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    <svg
+                      class="w-3 h-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                      />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                  </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="p-4 md:p-5">
+                  <div class="space-y-4">
+                    <!-- textarea -->
+                    <textarea
+                      #textareaa
+                      [(ngModel)]="content"
+                      name="content"
+                      id="content"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                      placeholder="{{
+                        'authenmodal.write your thoughts here' | translate
+                      }}"
+                    ></textarea>
+                    <!--upload file  -->
+                    <div class="flex items-center justify-center w-full">
+                      <label
+                        for="dropzone-file"
+                        class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                      >
+                        <div
+                          class="flex flex-col items-center justify-center pt-5 pb-6"
+                        >
+                          <svg
+                            class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 20 16"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                            />
+                          </svg>
+                          <p
+                            class="mb-2 text-sm text-gray-500 dark:text-gray-400"
+                          >
+                            <span class="font-semibold">{{
+                              "authenmodal.Click to upload or drag and drop"
+                                | translate
+                            }}</span>
+                          </p>
+                          <p class="text-xs text-gray-500 dark:text-gray-400">
+                            SVG, PNG, JPG or GIF (MAX. 800x400px)
+                          </p>
+                        </div>
+                        <input
+                          #createInput
+                          (change)="changefile($event)"
+                          id="dropzone-file"
+                          type="file"
+                          class="hidden"
+                        />
+                      </label>
+                    </div>
+
+                    <!-- add button -->
+                    <button
+                      (click)="creatPost()"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 text-center block w-full"
+                    >
+                      {{ "authenmodal.Post" | translate }}
+                    </button>
+                  </div>
+                  @if (messgerror) {
+                  <p
+                    class="text-center bg-red-200 rounded text-red-700 p-3 my-2 w-1/2 mx-auto"
+                    role="alert"
+                  >
+                    {{ messgerror }}
+                  </p>
+                  } @if (messsuccess) {
+                  <p
+                    class="text-center bg-green-200 rounded text-green-700 p-3 my-2 w-1/2 mx-auto"
+                    role="alert"
+                  >
+                    {{ messsuccess }}
+                  </p>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        @for (post of userPosts; track post.id) {
+        <article
+          class="search-results one-post bg-white py-5 rounded-md flex flex-col my-5 dark:bg-[#1C1C1D] dark:border dark:border-b dark:border-gray-700"
+        >
+          <div class="px-5">
+            <!-- header -->
+            <div class="title flex items-center gap-5">
+              <img
+                (click)="open(post.user.photo)"
+                class="w-10 h-10 rounded-full"
+                [src]="post.user.photo"
+                alt="user profile"
+              />
+              <div class="user-data">
+                <h3 class="font-bold dark:text-white">{{ post.user.name }}</h3>
+                <p class="font-light text-gray-700 font-p dark:text-white">
+                  {{ post.createdAt | date }}
+                </p>
+              </div>
+              <div class="menu ms-auto relative">
+                <span
+                  (click)="thehidden(post.id)"
+                  (click)="dots($event, post.id)"
+                >
+                  <i class="fa-solid fa-ellipsis dark:text-gray-500"></i
+                ></span>
+                <div
+                  #commentLista
+                  id="{{ post.id }}"
+                  class="hidden overflow-hidden rounded-lg bg-slate-100 justify-center items-center dark:bg-gray-700"
+                >
+                  <!--update model toggle -->
+                  <button
+                    (click)="updateData(post)"
+                    data-modal-target="default-modal"
+                    type="button"
+                    class="dark:text-neutral-50 block px-4 py-2 border-b border-black"
+                  >
+                    {{ "user.Update" | translate }}
+                  </button>
+                  <button
+                    type="button"
+                    class="dark:text-neutral-50 block px-5 py-2"
+                    (click)="deletePost(post._id)"
+                  >
+                    {{ "user.Delete" | translate }}
+                  </button>
+                </div>
+                <!--update modeal -->
+                <div
+                  id="default-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  data-modal-backdrop="static-modal"
+                  class="bg-dark hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                >
+                  <div class="relative p-4 w-1/2 max-h-full">
+                    <!--update Modal content -->
+                    <div
+                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <!--update Modal header -->
+                      <div
+                        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                      >
+                        <h3
+                          class="text-xl font-semibold text-gray-900 dark:text-white"
+                        >
+                          {{ "user.Update Post" | translate }}
+                        </h3>
+                        <button
+                          (click)="hidedefultmodal()"
+                          type="button"
+                          class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 14"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                            />
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="p-4 md:p-5">
+                        <div class="space-y-4">
+                          <textarea
+                            #textareaupdate
+                            [(ngModel)]="contentUpdate"
+                            name="content"
+                            id="content"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="{{
+                              'authenmodal.write your thoughts here' | translate
+                            }}"
+                          ></textarea>
+                          <!--upload file  -->
+                          <div class="flex items-center justify-center w-full">
+                            <label
+                              for="dropzone-file"
+                              class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
+                            >
+                              <div
+                                class="flex flex-col items-center justify-center pt-5 pb-6"
+                              >
+                                <svg
+                                  class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 20 16"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                                  />
+                                </svg>
+                                <p
+                                  class="mb-2 text-sm text-gray-500 dark:text-gray-400"
+                                >
+                                  <span class="font-semibold">{{
+                                    "authenmodal.Click to upload or drag and drop"
+                                      | translate
+                                  }}</span>
+                                </p>
+                                <p
+                                  class="text-xs text-gray-500 dark:text-gray-400"
+                                >
+                                  SVG, PNG, JPG or GIF (MAX. 800x400px)
+                                </p>
+                              </div>
+                              <input
+                                #input
+                                (change)="changefile($event)"
+                                id="dropzone-file"
+                                type="file"
+                                class="hidden"
+                              />
+                            </label>
+                          </div>
+                          <!-- add button -->
+                          <button
+                            (click)="updatepost()"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 text-center block w-full"
+                          >
+                            {{ "user.Update" | translate }}
+                          </button>
+                        </div>
+                        @if (messgerror) {
+                        <p
+                          class="text-center bg-red-200 rounded text-red-700 p-3 my-2 w-1/2 mx-auto"
+                          role="alert"
+                        >
+                          {{ messgerror }}
+                        </p>
+                        } @if (messsuccess) {
+                        <p
+                          class="text-center bg-green-200 rounded text-green-700 p-3 my-2 w-1/2 mx-auto"
+                          role="alert"
+                        >
+                          {{ messsuccess }}
+                        </p>
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--decription  -->
+            @if (post.body) {
+            <p class="my-5 dark:text-white">{{ post.body }}</p>
+            }
+            <!-- image -->
+            @if (post.image) {
+            <img
+              (click)="open(post.image)"
+              [src]="post.image"
+              class="w-full rounded-md mb-3"
+              alt="post image"
+            />}
+          </div>
+          <button
+            #showComments
+            (click)="showHiddenComment(post.id)"
+            class="text-blue-600 self-start w-full text-center pt-3 border-t"
+          >
+            {{ "authenmodal.Show Comments" | translate }}
+          </button>
+          <!-- allcomments -->
+          @defer (on interaction(showComments)) {
+          <app-comments [postId]="post.id"></app-comments>
+          } @loading {
+          <h2 class="text-center text-teal-500">
+            {{ "authenmodal.Loading" | translate }}.......
+          </h2>
+          }
+        </article>
+        }
+      </div>
+    </div>
+  </section>
+  <section>
+    @if (ischeecked==true) {
+    <div
+      #light
+      (click)="ligthfunc($event)"
+      class="light flex items-center justify-center"
+    >
+      <img
+        class="border border-white"
+        [src]="theCurentImg"
+        width="600px"
+        alt="the portfolio image"
+      />
+    </div>
+    }
+  </section>
+</section>

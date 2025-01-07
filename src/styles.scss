@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background-color: #eee;
+    position: relative;
+}
+i{
+    font-size: 30px;
+    color: rgb(170, 169, 169);
+}
+.image-width{
+width: 150px;
+height: 150px;
+border-radius: 50%;
+border: rgb(221, 217, 217) solid 5px;
+}
+.font-logo{
+    font-size: 40px;
+}
+.bg-dark
+{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+ a,button{
+cursor:pointer;
+}
+.light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0);
+    z-index: 999999;
+    
+}
+.dark{
+background-color: #1C1C1D;
+}
+.inputp,.inputp:focus,.input-mail ,.input-mail:focus,.input ,.input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+button , li , a ,body{
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+  @media (max-width:768px) {
+    .fonts{
+        font-size: 13px !important;
+        font-weight: 500 !important;
+      }
+}
+@media (min-width:768px) {
+    .fonts{
+        font-size: 12px !important;
+        font-weight: 500 !important;
+      }
+}
+@media (min-width:992px) {
+    .fonts{
+        font-size: 15px !important;
+        font-weight: 500 !important;
+      }
+}

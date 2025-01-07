@@ -1,0 +1,26 @@
+<section
+  class="w-[100%] h-[100vh] flex justify-center items-center bg-white dark:bg-[#1C1C1D] font-bold dark:text-white"
+>
+  <div class="text-center">
+    <h1>{{ "notfound.Sorry, this page isn't available" | translate }}</h1>
+    <p>
+      {{
+        "notfound.This link you follow may be broken, or the page may have been removed"
+          | translate
+      }}.
+    </p>
+    <img
+      class="w-full my-5"
+      src="./assets/images/okey.png"
+      alt="not found imag"
+    />
+    <P>
+      <a (click)="back()" class="text-blue-700 hover:underline mx-5"
+        >{{ "notfound.go back to the previous page" | translate }}
+      </a>
+      <a class="text-blue-700 hover:underline mx-5">{{
+        "notfound.Visit Our Help Center" | translate
+      }}</a></P
+    >
+  </div>
+</section>

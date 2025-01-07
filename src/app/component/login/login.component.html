@@ -1,0 +1,140 @@
+<section
+  class="dark:bg-[#1C1C1D] w-full h-[100vh] pt-5 overflow-y-scroll overflow-hidden flex items-center justify-center"
+>
+  <div class="grid md:grid-cols-2 gap-4 mt-5 w-3/4">
+    <div class="text-center md:text-start">
+      <h1 class="text-blue-600 font-bold text-6xl py-4">
+        {{ "navbar.facebook" | translate }}
+      </h1>
+      <p class="text-slate-700 dark:text-white mb-3 md:text-xl font-bold">
+        {{
+          "login.Facebook gives you the ability to connect with pepole"
+            | translate
+        }}
+      </p>
+      <p class="text-slate-700 dark:text-white mb-3 md:text-xl font-bold">
+        {{ "login.And share what you want with them." | translate }}
+      </p>
+    </div>
+    <section
+      class="border border-sky-950 px-3 py-5 shadow my-2 rounded-xl w-full mx-auto dark:bg-[#1C1C1D] dark:border dark:border-gray-600"
+    >
+      <h2 class="text-slate-700 text-3xl font-bold dark:text-white">
+        {{ "login.login Now" | translate }}
+      </h2>
+
+      <form [formGroup]="login" (ngSubmit)="loginfunction()">
+        <div class="my-4">
+          <input
+            [ngClass]="{ 
+          'bg-green-100 ':!login.get('email')?.errors && (login.get('email')?.touched ||
+          login.get('email')?.dirty),
+          'bg-red-100':login.get('email')?.errors && (login.get('email')?.touched ||
+          login.get('email')?.dirty),
+       }"
+            id="email"
+            type="email"
+            class="w-full rounded input-mail"
+            formControlName="email"
+            placeholder="{{ 'login.Type Your Email' | translate }}"
+          />
+          @if (login.get('email')?.errors && (login.get('email')?.touched
+          ||login.get('email')?.dirty)){
+          <div
+            class="border border-red-500 bg-red-200 rounded text-red-700 p-3 my-2"
+            role="alert"
+          >
+            @if (login.get('email')?.getError('required')) {
+            <p class="m-0">{{ "login.email is required" | translate }}.</p>
+            } @else if (login.get('email')?.getError('email')) {
+            <p class="m-0">{{ "login.enter valid email" | translate }}.</p>
+            }
+          </div>
+          }
+        </div>
+        <div class="my-4">
+          <div id="input-fack" class="bg-white rounded">
+            <div
+              class="rounded"
+              [ngClass]="{
+            'bg-green-100 ':!login.get('password')?.errors && (login.get('password')?.touched ||
+            login.get('password')?.dirty),
+            'bg-red-100':login.get('password')?.errors && (login.get('password')?.touched ||
+            login.get('password')?.dirty),
+         }"
+            >
+              <input
+                (input)="inputfunc($event)"
+                #inputPassword
+                id="password"
+                type="password"
+                class="w-[95%] bg-transparent inputp"
+                formControlName="password"
+                placeholder="{{ 'login.Type Your Password' | translate }}"
+              />
+              <i
+                #passIcon
+                id="pass"
+                (click)="showPassword()"
+                class="fas text-lg"
+              ></i>
+            </div>
+          </div>
+          @if (login.get('password')?.errors && (login.get('password')?.touched
+          ||login.get('password')?.dirty)) {
+          <div
+            class="border border-red-500 bg-red-200 rounded text-red-700 p-3 my-2"
+            role="alert"
+          >
+            @if (login.get('password')?.getError('required')) {
+            <p class="m-0">{{ "login.password is required" | translate }}.</p>
+            } @else if (login.get('password')?.getError('pattern')) {
+            <p class="m-0">
+              {{
+                "change.enter valid password. (8 char. at least one capital letter and on special letter)"
+                  | translate
+              }}
+            </p>
+            }
+          </div>
+          }
+        </div>
+        <button
+          class="bg-blue-600 border border-blue-600 py-3 hover:bg-blue-700 px-7 text-slate-50 rounded block w-full mb-3"
+          type="submit"
+        >
+          {{ "change.Sigin In" | translate }} @if (isloading) {
+          <span class="fas fa-spin fa-spinner"></span>}
+        </button>
+        <div
+          class="register-btn border-t border-sky-950 dark:border-gray-600 pt-3"
+        >
+          <button
+            type="button"
+            class="bg-[#119F16] border border-[#119F16] hover:bg-[#2d8230] py-3 px-7 text-slate-50 rounded mx-auto block font-bold"
+            routerLink="/register"
+            routerLinkActive="router-link-active"
+          >
+            {{ "login.Create Account" | translate }}?
+          </button>
+        </div>
+      </form>
+
+      @if (messgerror) {
+      <p
+        class="text-center bg-red-200 rounded text-red-700 p-3 my-2 w-1/2 mx-auto"
+        role="alert"
+      >
+        {{ messgerror }}
+      </p>
+      } @if (messsuccess) {
+      <p
+        class="text-center bg-green-200 rounded text-green-700 p-3 my-2 w-1/2 mx-auto"
+        role="alert"
+      >
+        {{ messsuccess }}
+      </p>
+      }
+    </section>
+  </div>
+</section>

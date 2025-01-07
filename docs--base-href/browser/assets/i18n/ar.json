@@ -1,0 +1,104 @@
+{
+    "navbar":{
+     "facebook":"فيسبوك",
+     "setting":"الإعدادات",
+     "lang":"اللغة",
+     "Arabic":"العربية",
+     "English":"الإنجليزية",
+     "dark mode":"الوضع الداكن",
+     "off":"متوقف",
+     "on":"قيد التشغيل",
+     "Use System Setting":"إستخدام إعدادات الجهاز",
+     "logout":"تسجيل الخروج"
+    },
+    "authenmodal":{
+     "Add New Post":"إنشاء منشور",
+     "Click to upload or drag and drop":"اضغط لتحميل الصورة",
+     "Post":"نشر",
+     "Show Comments":"التعليقات",
+     "Loading":"تحميل",
+     "what`s on your mind":"بم تفكر",
+     "?":"؟",
+     "write your thoughts here":"بم تفكر ؟"
+    },
+    "user":{
+        "0 Freinds":"لا يوجد أصدقاء ",
+        "AddStory":"إضافة الي القصة",
+        "EditProfile":"تعديل الملف الشخصي",
+        "Posts":"المنشورات ",
+        "About":"حول",
+        "Friends":"الأصدقاء",
+        "Photos":"الصور",
+        "Vedios":"مقاطع الفيديو",
+        "Reals":"الريلز",
+        "Change Password":"تغير كلمةالمرور",
+        "Logout":"تسجيل الخروج",
+        "More":"المزيد",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit.":"لا إله الإ أنت سبحانك إني كنت من الظالمين .",
+        "worked at Lorem, ipsum. Went to lorem secondary school for girls.cario.":"تعمل في القاهرة, درست في مدرسة البنات بالقاهرة",
+        "single":"أعزب",
+        "Delete":"حذف",
+        "Update Post":"تعديل المنشور",
+        "delete image":"حذف المنشور",
+        "Update":"تعديل",
+        "Profile Picture":"صورة الملف الشخصية"
+    },
+    "change":{
+        "Change Password":"تغير كلمةالمرور",
+        "password is required":"كلمةالمرور مطلوبة (باللغة الإنجليزية)",
+        "enter valid password. (8 char. at least one capital letter and on special letter)":"(% ,^ ,$)كلمة المرور (باللغة الإنجليزية) تحتوي على 8 أحرف على الأقل، تشمل حرفًا كبيرًا واحدًا على الأقل ورمزًا خاصًا.",
+        "newPassword is required":"كلمةالمرور الجديدة مطلوبة (باللغة الإنجليزية)",
+        "Sigin In":"تسجيل الدخول ",
+        "Type Your password":"ادخل كلمةالمرور القديمة ",
+        "Type Your New  Password":"ادخل كلمة المرور الجديدة"
+    },
+    "upload":{
+        "Select Your Profile Picture":"ادخل صورة الملف الشخصي"
+    },
+    "notfound":{
+        "Sorry, this page isn't available":"عذراّّ هذه الصفحة غير متاحة الان.",
+        "This link you follow may be broken, or the page may have been removed":"قد تكون تمت ازالتها او حذفت",
+        "go back to the previous page":"الرجوع الي الصفحة السابقة",
+        "Visit Our Help Center":"زور مركز المساعدة للتوصيح اكثر."
+    },
+    "login":{
+        "login Now":"تسجيل الدخول",
+        "Type Your Email":" البريد الإلكتروني",
+        "email is required":"البريد الإلكتروني مطلوب",
+        "enter valid email":" البريد الإلكتروني غير صحيح",
+        "Type Your Password":"إدخل كلمة المرور",
+        "password is required":"كلمةالمرور مطلوبة",
+        "enter valid password. (8 char. at least one capital letter and on special letter)":"(% ,^ ,$)كلمة المرور (باللغة الإنجليزية) تحتوي على 8 أحرف على الأقل، تشمل حرفًا كبيرًا واحدًا على الأقل ورمزًا خاصًا",
+        "Create Account":"إنشاء حساب",
+        "Facebook gives you the ability to connect with pepole":"يمنحك فيسبوك إمكانية التواصل مع الأشخاص",
+        "And share what you want with them.":"ومشاركة ما تريد معهم.",
+        "Create a new account":"إنشاء حساب جديد",
+        "It's quick and easy":"الخطوات سهلة وسريعة"
+    },
+    "register":{
+        "Register Now":"إنشاء حساب",
+        "Type Your Name":"إدخل الاسم بالكامل",
+        "name is required":"الاسم مطلوب",
+        "name should be more or equal tha 2 chars":"يجب ان يكون الاسم اكثر من حرفين",
+        "name should be less or equal tha 20 chars":"يجب ان يكون الاسم اقل من  عشرين حرف",
+        "Confirm Password":"تأكيد كلمةالمرور",
+        "password confirmation is incorrect":"كلمةالمرور خاطأه",
+        "Select Dtae":"إدخل تاريخ ميلادك",
+        "dateOfBirth is required":"تاريخ الميلاد مطلوب",
+        "enter valid dateOfBirth":"إدخل تاريخ ميلاد صحيح",
+        "Male":"ذكر",
+        "Female":"أنثي",
+        "gender is required":"النوع مطلوب",
+        "Sigin Up":"إنشاء حساب"
+    },
+    "comment":{
+        "No Comments":"لا يوجد تعليقات",
+        "Newest":"الأحداث",
+        "Delete":"حذف",
+        "UpDate":"تعديل",
+        "Sorry, The Post Owner Has Blocked You From Doing This.":" .عذراّ, لا يمكنك حذف تعليقك لقد قيد صاحب المنشور حذف التعليقات ",
+        "Your Comment":"أكتب تعليقك",
+        "At Least 2 Char":"يتكون من حرفين علي الأقل."
+}
+ }
+ 

@@ -1,0 +1,263 @@
+<section class="dark:bg-[#1C1C1D] w-full h-[100vh] pt-5 overflow-y-scroll">
+  <div class="title-reg my-5">
+    <h1 class="text-blue-600 font-bold text-6xl text-center py-4">
+      {{ "navbar.facebook" | translate }}
+    </h1>
+  </div>
+  <section
+    class="border border-sky-950 px-3 py-5 shadow my-2 rounded-xl w-2/3 mx-auto dark:bg-[#1C1C1D] dark:border dark:border-gray-600 md:w-1/3"
+  >
+    <div class="title border-b border-sky-950 dark:border-gray-600">
+      <h2 class="text-slate-700 dark:text-white text-center text-xl">
+        {{ "login.Create a new account" | translate }}
+      </h2>
+      <p class="text-slate-700 dark:text-white text-center mb-3 text-sm">
+        {{ "login.It's quick and easy" | translate }}.
+      </p>
+    </div>
+    <form [formGroup]="register" (ngSubmit)="registerfunction()" class="my-5">
+      <div class="my-4">
+        <input
+          [ngClass]="{ 
+          'bg-green-100 ':!register.get('name')?.errors && (register.get('name')?.touched ||
+          register.get('name')?.dirty),
+          'bg-red-100':register.get('name')?.errors && (register.get('name')?.touched ||
+          register.get('name')?.dirty),
+       }"
+          id="name"
+          type="text"
+          class="w-full rounded input"
+          formControlName="name"
+          placeholder="{{ 'register.Type Your Name' | translate }}"
+        />
+        @if (register.get('name')?.errors && (register.get('name')?.touched
+        ||register.get('name')?.dirty)) {
+        <div
+          class="border border-red-500 bg-red-300 rounded text-red-700 p-3 my-2"
+          role="alert"
+        >
+          @if (register.get('name')?.getError('required')) {
+          <p class="m-0">{{ "register.name is required" | translate }}.</p>
+          } @else if (register.get('name')?.getError('minlength')) {
+          <p class="m-0">
+            {{
+              "register.name should be more or equal tha 2 chars" | translate
+            }}.
+          </p>
+          } @else if (register.get('name')?.getError('maxlength')) {
+          <p class="m-0">
+            {{
+              "register.name should be less or equal tha 20 chars" | translate
+            }}.
+          </p>
+          }
+        </div>
+        }
+      </div>
+      <div class="my-4">
+        <input
+          [ngClass]="{ 
+          'bg-green-100 ':!register.get('email')?.errors && (register.get('email')?.touched ||
+          register.get('email')?.dirty),
+          'bg-red-100':register.get('email')?.errors && (register.get('email')?.touched ||
+          register.get('email')?.dirty),
+       }"
+          id="email"
+          type="email"
+          class="w-full rounded input"
+          formControlName="email"
+          placeholder="{{ 'login.Type Your Email' | translate }}"
+        />
+        @if (register.get('email')?.errors && (register.get('email')?.touched
+        ||register.get('email')?.dirty)){
+        <div
+          class="border border-red-500 bg-red-300 rounded text-red-700 p-3 my-2"
+          role="alert"
+        >
+          @if (register.get('email')?.getError('required')) {
+          <p class="m-0">{{ "login.email is required" | translate }}.</p>
+          } @else if (register.get('email')?.getError('email')) {
+          <p class="m-0">{{ "login.enter valid email" | translate }}.</p>
+          }
+        </div>
+        }
+      </div>
+      <div class="my-4">
+        <div id="input-fack" class="bg-white rounded">
+          <div
+            class="rounded"
+            [ngClass]="{ 
+          'bg-green-100 ':!register.get('password')?.errors && (register.get('password')?.touched ||
+          register.get('password')?.dirty),
+          'bg-red-100':register.get('password')?.errors && (register.get('password')?.touched ||
+          register.get('password')?.dirty),
+       }"
+          >
+            <input
+              (input)="inputfunc($event)"
+              #inputPassword
+              id="password"
+              type="password"
+              class="w-[95%] bg-transparent inputp"
+              formControlName="password"
+              placeholder="{{ 'login.Type Your Password' | translate }}"
+            />
+            <i
+              #passIcon
+              id="pass"
+              (click)="showPassword()"
+              class="fas text-lg"
+            ></i>
+          </div>
+        </div>
+        @if (register.get('password')?.errors &&
+        (register.get('password')?.touched ||register.get('password')?.dirty)) {
+        <div
+          class="border border-red-500 bg-red-300 rounded text-red-700 p-3 my-2"
+          role="alert"
+        >
+          @if (register.get('password')?.getError('required')) {
+          <p class="m-0">{{ "login.password is required" | translate }}.</p>
+          } @else if (register.get('password')?.getError('pattern')) {
+          <p class="m-0">
+            {{
+              "login.enter valid password. (8 char. at least one capital letter and on special letter)"
+                | translate
+            }}
+          </p>
+          }
+        </div>
+        }
+      </div>
+      <div class="my-4">
+        <div id="input-fack" class="bg-white rounded">
+          <div
+            class="rounded"
+            [ngClass]="{ 
+              'bg-green-100 ':!register.getError('mismatch')  && (register.get('rePassword')?.touched ||
+              register.get('rePassword')?.dirty),
+              'bg-red-100':register.getError('mismatch')  && (register.get('rePassword')?.touched ||
+              register.get('rePassword')?.dirty),
+           }"
+          >
+            <input
+              (input)="inputfunc2($event)"
+              #inputPassword2
+              id="repassword"
+              type="password"
+              class="w-[95%] bg-transparent inputp"
+              formControlName="rePassword"
+              placeholder="{{ 'register.Confirm Password' | translate }}"
+            />
+            <i
+              #passIcon2
+              id="pass2"
+              (click)="showPassword2()"
+              class="fas text-lg"
+            ></i>
+          </div>
+        </div>
+        @if (register.getError('mismatch') &&
+        (register.get('rePassword')?.touched
+        ||register.get('rePassword')?.dirty)) {
+        <div class="bg-red-300 rounded text-red-700 p-3 my-2" role="alert">
+          <p class="m-0">
+            {{ "register.password confirmation is incorrect" | translate }}.
+          </p>
+        </div>
+        }
+      </div>
+      <div class="my-4">
+        <input
+          [ngClass]="{ 
+          'bg-green-100 ':!register.get('dateOfBirth')?.errors && (register.get('dateOfBirth')?.touched ||
+          register.get('dateOfBirth')?.dirty),
+          'bg-red-100':register.get('dateOfBirth')?.errors && (register.get('dateOfBirth')?.touched ||
+          register.get('dateOfBirth')?.dirty),
+       }"
+          id="dateOfBirth"
+          type="date"
+          placeholder="{{ 'register.Select Dtae' | translate }}"
+          class="w-full rounded input"
+          formControlName="dateOfBirth"
+        />
+        @if (register.get('dateOfBirth')?.errors &&
+        (register.get('dateOfBirth')?.touched ||
+        register.get('dateOfBirth')?.dirty)) {
+        <div
+          class="border border-red-500 bg-red-300 rounded text-red-700 p-3 my-2"
+          role="alert"
+        >
+          @if (register.get('dateOfBirth')?.getError('required')) {
+          <p class="m-0">
+            {{ "register.dateOfBirth is required" | translate }}.
+          </p>
+          } @else if (register.get('dateOfBirth')?.getError('pattern')) {
+          <p class="m-0">
+            {{ "register.enter valid dateOfBirth" | translate }}.
+          </p>
+          }
+        </div>
+        }
+      </div>
+      <div class="my-5">
+        <input
+          id="gender"
+          type="radio"
+          class="me-2 input"
+          formControlName="gender"
+          name="gender"
+          value="fmale"
+        />
+        <span class="me-3 dark:text-white">{{
+          "register.Male" | translate
+        }}</span>
+
+        <input
+          id="gender"
+          type="radio"
+          class="me-2 input"
+          formControlName="gender"
+          name="gender"
+          value="male"
+        />
+        <span class="dark:text-white">{{ "register.Female" | translate }}</span>
+
+        <!-- /////////////////////////// -->
+        @if (register.get('gender')?.errors && (register.get('gender')?.touched
+        || register.get('gender')?.dirty)) {
+        <div
+          class="border border-red-500 bg-red-300 rounded text-red-700 p-3 my-2"
+          role="alert"
+        >
+          @if (register.get('gender')?.getError('required')) {
+          <p class="m-0">{{ "register.gender is required" | translate }}.</p>
+          }
+        </div>
+        }
+      </div>
+      <button
+        class="bg-[#119F16] border border-[#119F16] hover:bg-[#2d8230] py-3 px-7 text-slate-50 rounded mx-auto block font-bold"
+        type="submit"
+      >
+        {{ "register.Sigin Up" | translate }} @if (isloading) {
+        <span class="fas fa-spin fa-spinner"></span>}
+      </button>
+    </form>
+    @if (messgerror) {
+    <p
+      class="text-center bg-red-300 rounded text-red-700 p-3 my-2 w-1/2 mx-auto"
+      role="alert"
+    >
+      {{ messgerror }}
+    </p>
+    } @if (messsuccess) {
+    <p
+      class="text-center bg-green-200 rounded text-green-700 p-3 my-2 w-1/2 mx-auto"
+      role="alert"
+    >
+      {{ messsuccess }}
+    </p>
+    }
+  </section>
+</section>

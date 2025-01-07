@@ -1,0 +1,103 @@
+{
+   "navbar":{
+    "facebook":"facebook",
+    "setting":"Setting",
+    "lang":"Lang",
+    "Arabic":"Arabic",
+    "English":"English",
+    "dark mode":"Dark mode",
+    "off":"Off",
+    "on":"On",
+    "Use System Setting":"Use System Setting",
+    "logout":"Logout"
+   },
+   "authenmodal":{
+    "Add New Post":"Add New Post",
+    "Click to upload or drag and drop":"Click to upload or drag and drop",
+    "Post":"Post",
+    "Show Comments":"Show Comments",
+    "Loading":"Loading",
+    "what`s on your mind":"what's on your mind",
+    "?":"?",
+    "write your thoughts here":"write your thoughts here"
+   },
+   "user":{
+        "0 Freinds":"0 Freinds",
+        "AddStory":"AddStory",
+        "EditProfile":"EditProfile",
+        "Posts":"Posts",
+        "About":"About",
+        "Friends":"Friends",
+        "Photos":"Photos",
+        "Vedios":"Vedios",
+        "Reals":"Reals",
+        "Change Password":"Change Password",
+        "Logout":"Logout",
+        "More":"More",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit.":"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "worked at Lorem, ipsum. Went to lorem secondary school for girls.cario.":"worked at Lorem, ipsum. Went to lorem secondary school for girls.cario.",
+        "single":"single", 
+        "Delete":"Delete",
+        "Update Post":"Update Post",
+        "delete image":"delete image",
+        "Update":"Update",
+        "Profile Picture":"Profile Picture"
+    },
+    "change":{
+        "Change Password":"Change Password",
+        "password is required":"password is required",
+        "enter valid password. (8 char. at least one capital letter and on special letter)":"enter valid password. (8 char. at least one capital letter and on special letter)",
+        "newPassword is required":"newPassword is required",
+        "Sigin In":"Sigin In",
+        "Type Your password":"Type Your Old password",
+        "Type Your New  Password":"Type Your New Password"
+        },
+    "upload":{
+        "Select Your Profile Picture":"Select Your Profile Picture"
+    },
+    "notfound":{
+        "Sorry, this page isn't available":"Sorry, this page isn't available",
+        "This link you follow may be broken, or the page may have been removed":"This link you follow may be broken, or the page may have been removed",
+        "go back to the previous page":"go back to the previous page",
+        "Visit Our Help Center":"Visit Our Help Center"
+    },
+    "login":{
+        "login Now":"login Now",
+        "Type Your Email":"Type Your Email",
+        "email is required":"email is required",
+        "enter valid email":"enter valid email",
+        "Type Your Password":"Type Your Password",
+        "password is required":"password is required",
+        "enter valid password. (8 char. at least one capital letter and on special letter)":"enter valid password. (8 char. at least one capital letter and on special letter)",
+        "Create Account":"Create Account",
+        "Facebook gives you the ability to connect with pepole":"Facebook gives you the ability to connect with pepole",
+        "And share what you want with them.":"And share what you want with them.",
+        "Create a new account":"Create a new account",
+        "It's quick and easy":"It's quick and easy"
+    },
+    "register":{
+        "Register Now":"Register Now",
+        "Type Your Name":"Type Your Name",
+        "name is required":"name is required",
+        "name should be more or equal tha 2 chars":"name should be more or equal tha 2 chars",
+        "name should be less or equal tha 20 chars":"name should be less or equal tha 20 chars",
+        "Confirm Password":"Confirm Password",
+        "password confirmation is incorrect":"password confirmation is incorrect",
+        "Select Dtae":"Select Dtae",
+        "dateOfBirth is required":"dateOfBirth is required",
+        "enter valid dateOfBirth":"enter valid dateOfBirth",
+        "Male":"Male",
+        "Female":"Female",
+        "gender is required":"gender is required",
+        "Sigin Up":"Sigin Up"
+    },
+    "comment":{
+        "No Comments":"No Comments",
+        "Newest":"Newest",
+        "Delete":"Delete",
+        "UpDate":"UpDate",
+        "Sorry, The Post Owner Has Blocked You From Doing This.":"Sorry, You Can't Delete Your Comment, The Post Owner Has Blocked You From Doing This.",
+        "Your Comment":" Write Your Comment",
+        "At Least 2 Char":"At Least 2 Char"
+}
+}
