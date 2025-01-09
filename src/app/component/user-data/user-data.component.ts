@@ -201,6 +201,14 @@ logout(){
 localStorage.removeItem("socialAppToken");
 localStorage.removeItem("userid");
 localStorage.removeItem("step");
+
+localStorage.removeItem("icona");
+localStorage.removeItem("icona2");
+localStorage.removeItem("icona3");
+localStorage.removeItem("icona4");
+localStorage.removeItem("icona5");
+localStorage.removeItem("icona6");
+
 setTimeout(() => {
   this._Router.navigate(['/login']);
   }, 1000);

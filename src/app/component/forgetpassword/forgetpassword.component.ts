@@ -81,14 +81,14 @@ showPassword(){
   this._Renderer2.addClass(document.getElementById("pass"),'fa-eye');
   this._Renderer2.removeAttribute(this.inputpassword.nativeElement,'type','password');
   this._Renderer2.setAttribute(this.inputpassword.nativeElement,'type','text');
-  localStorage.setItem("icona3",'fa-eye');
+  localStorage.setItem("icona5",'fa-eye');
  }
  else if (this.passIcon.nativeElement.classList.contains("fa-eye")==true) {
   this._Renderer2.removeClass(document.getElementById("pass"),'fa-eye');
   this._Renderer2.addClass(document.getElementById("pass"),'fa-eye-slash');
   this._Renderer2.removeAttribute(this.inputpassword.nativeElement,'type','text');
   this._Renderer2.setAttribute(this.inputpassword.nativeElement,'type','password');
-  localStorage.setItem("icona3",'fa-eye-slash');
+  localStorage.setItem("icona5",'fa-eye-slash');
  }
 }
 inputfunc(e:Event){
@@ -102,8 +102,8 @@ inputfunc(e:Event){
   if(input.value.length>0){
     if (isPlatformBrowser(this._PLATFORM_ID)) {
 
- if(localStorage.getItem('icona3')!=null){
-  this.icon3= localStorage.getItem("icona3")!;
+ if(localStorage.getItem('icona5')!=null){
+  this.icon3= localStorage.getItem("icona5")!;
   if (this.icon3=='fa-eye') {
     this._Renderer2.addClass(document.getElementById("pass"),'fa-eye');
   this._Renderer2.removeAttribute(this.inputpassword.nativeElement,'type','password');
@@ -116,7 +116,7 @@ inputfunc(e:Event){
   this._Renderer2.setAttribute(this.inputpassword.nativeElement,'type','password');
   }
 }
-if (localStorage.getItem('icona3')==null) {
+if (localStorage.getItem('icona5')==null) {
 this._Renderer2.addClass(document.getElementById("pass"),'fa-eye-slash');
 this._Renderer2.removeAttribute(this.inputpassword.nativeElement,'type','text');
 this._Renderer2.setAttribute(this.inputpassword.nativeElement,'type','password');
@@ -132,14 +132,14 @@ showPassword2(){
   this._Renderer2.addClass(document.getElementById("pass2"),'fa-eye');
   this._Renderer2.removeAttribute(this.inputpassword2.nativeElement,'type','password');
   this._Renderer2.setAttribute(this.inputpassword2.nativeElement,'type','text');
-  localStorage.setItem("icona4",'fa-eye');
+  localStorage.setItem("icona6",'fa-eye');
  }
  else if (this.passIcon2.nativeElement.classList.contains("fa-eye")==true) {
   this._Renderer2.removeClass(document.getElementById("pass2"),'fa-eye');
   this._Renderer2.addClass(document.getElementById("pass2"),'fa-eye-slash');
   this._Renderer2.removeAttribute(this.inputpassword2.nativeElement,'type','text');
   this._Renderer2.setAttribute(this.inputpassword2.nativeElement,'type','password');
-  localStorage.setItem("icona4",'fa-eye-slash');
+  localStorage.setItem("icona6",'fa-eye-slash');
  }
 }
 inputfunc2(e:Event){
@@ -153,8 +153,8 @@ inputfunc2(e:Event){
   }
   if(input.value.length>0){
     if (isPlatformBrowser(this._PLATFORM_ID)) {
- if(localStorage.getItem('icona4')!=null){
-  this.icon4= localStorage.getItem("icona4")!;
+ if(localStorage.getItem('icona6')!=null){
+  this.icon4= localStorage.getItem("icona6")!;
   if (this.icon4=='fa-eye') {
     this._Renderer2.addClass(document.getElementById("pass2"),'fa-eye');
   this._Renderer2.removeAttribute(this.inputpassword2.nativeElement,'type','password');
@@ -167,7 +167,7 @@ inputfunc2(e:Event){
   this._Renderer2.setAttribute(this.inputpassword2.nativeElement,'type','password');
   }
 }
-if (localStorage.getItem('icona4')==null) {
+if (localStorage.getItem('icona6')==null) {
 this._Renderer2.addClass(document.getElementById("pass2"),'fa-eye-slash');
 this._Renderer2.removeAttribute(this.inputpassword2.nativeElement,'type','text');
 this._Renderer2.setAttribute(this.inputpassword2.nativeElement,'type','password');

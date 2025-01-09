@@ -5,7 +5,7 @@
     </h1>
   </div>
   <section
-    class="border border-sky-950 px-3 py-5 shadow my-2 rounded-xl w-2/3 mx-auto dark:bg-[#1C1C1D] dark:border dark:border-gray-600 md:w-1/3"
+    class="border border-sky-950 px-3 py-5 shadow my-2 rounded-xl mx-auto dark:bg-[#1C1C1D] dark:border dark:border-gray-600 w-11/12 md:w-9/12 lg:w-6/12"
   >
     <div class="title border-b border-sky-950 dark:border-gray-600">
       <h2 class="text-slate-700 dark:text-white text-center text-xl">
@@ -85,7 +85,7 @@
       <div class="my-4">
         <div id="input-fack" class="bg-white rounded">
           <div
-            class="rounded"
+            class="rounded flex flex-nowrap items-center"
             [ngClass]="{ 
           'bg-green-100 ':!register.get('password')?.errors && (register.get('password')?.touched ||
           register.get('password')?.dirty),
@@ -132,7 +132,7 @@
       <div class="my-4">
         <div id="input-fack" class="bg-white rounded">
           <div
-            class="rounded"
+            class="rounded flex flex-nowrap items-center"
             [ngClass]="{ 
               'bg-green-100 ':!register.getError('mismatch')  && (register.get('rePassword')?.touched ||
               register.get('rePassword')?.dirty),
