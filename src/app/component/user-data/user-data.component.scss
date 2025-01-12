@@ -4,7 +4,7 @@
     height:70px;
     border-radius: 50%;
     top:280px !important;
-    left:280px !important;
+    left:20px !important;
     right:20px !important;
     border: rgb(221, 217, 217) solid 5px;
     }
@@ -59,7 +59,7 @@
         height:70px;
         border-radius: 50%;
         top:280px !important;
-        left:280px !important;
+        left:20px !important;
         right:25px !important;
         border: rgb(221, 217, 217) solid 5px;
         }
@@ -80,7 +80,7 @@
         width: 90px;
         height:90px;
         top:280px !important;
-        left:280px !important;
+        left:15px !important;
         right:15px !important;
         border-radius: 50%;
         border: rgb(221, 217, 217) solid 5px;
@@ -117,7 +117,7 @@
         height: 115px;
         border-radius: 50%;
         top:280px !important;
-        left:280px !important;
+        left:10px !important;
         right:10px !important;
         border: rgb(221, 217, 217) solid 5px;
         }
@@ -157,7 +157,7 @@
   height:130px;
   border-radius: 50%;
   top:250px !important;
-  left:280px !important;
+  left:15px !important;
   right:15px !important;
   border: rgb(221, 217, 217) solid 5px;
   }
@@ -178,7 +178,7 @@ width:130px;
 height:130px;
 border-radius: 50%;
 top:250px !important;
-left:280px !important;
+left:15px !important;
 right:15px !important;
 border: rgb(221, 217, 217) solid 5px;
 }
@@ -215,14 +215,35 @@ border: rgb(221, 217, 217) solid 5px;
         height: 150px;
         border-radius: 50%;
         top:250px !important;
-        left:280px !important;
+        left:20px !important;
         right:25px !important;
         border: rgb(221, 217, 217) solid 5px;
       }
-    //  s
     .w-photos{
         width: 150px;
     }
+}
+@media (min-width:1200px) {
+    .image-width{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      top:230px !important;
+      left:20px !important;
+      right:25px !important;
+      border: rgb(221, 217, 217) solid 5px;
+    }
+}
+@media (min-width:1500px) {
+  .image-width{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    top:200px !important;
+    left:20px !important;
+    right:25px !important;
+    border: rgb(221, 217, 217) solid 5px;
+  }
 }
 p{
   font-weight: 300;
