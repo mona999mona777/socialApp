@@ -1,7 +1,7 @@
 <section
   class="dark:bg-[#1C1C1D] w-full h-[100vh] pt-5 overflow-y-scroll overflow-hidden flex items-center justify-center"
 >
-  <div class="grid md:grid-cols-2 gap-4 mt-5 w-3/4">
+  <div class="grid md:grid-cols-2 gap-4 mt-5 w-11/12 mx-auto lg:w-3/4">
     <div class="text-center md:text-start">
       <h1 class="text-blue-600 font-bold text-6xl py-4">
         {{ "navbar.facebook" | translate }}
@@ -17,7 +17,7 @@
       </p>
     </div>
     <section
-      class="border border-sky-950 px-3 py-5 shadow my-2 rounded-xl w-full mx-auto dark:bg-[#1C1C1D] dark:border dark:border-gray-600"
+      class="border border-sky-950 px-3 py-5 shadow my-2 rounded-xl bg-orange-300 w-full mx-auto dark:bg-[#1C1C1D] dark:border dark:border-gray-600"
     >
       <h2 class="text-slate-700 text-3xl font-bold dark:text-white">
         {{ "login.login Now" | translate }}
@@ -122,14 +122,14 @@
 
       @if (messgerror) {
       <p
-        class="text-center bg-red-200 rounded text-red-700 p-3 my-2 w-1/2 mx-auto"
+        class="text-center bg-red-200 rounded text-red-700 p-3 my-2 w-10/12 lg:w-1/2 mx-auto"
         role="alert"
       >
         {{ messgerror }}
       </p>
       } @if (messsuccess) {
       <p
-        class="text-center bg-green-200 rounded text-green-700 p-3 my-2 w-1/2 mx-auto"
+        class="text-center bg-green-200 rounded text-green-700 p-3 my-2 w-10/12 lg:w-1/2 mx-auto"
         role="alert"
       >
         {{ messsuccess }}

@@ -2,43 +2,16 @@
     max-height:400px ;
     overflow-y: auto;
 }
-// @media (min-width:768px) {
-//       h3 ,h4{
-//         font-size: 8px;
-//         font-weight: 500;
-//         white-space:nowrap ;
-//       }
-//         p{
-//             font-size: 15px;
-//             font-weight: 300;
-//         }
-//         ::placeholder{
-//             font-size: 8px;
-//             font-weight: 500;
-//         }
-//         button{
-//             font-size: 8px;
-//             font-weight: 500;
-            
-//           }
-// }
-// @media (max-width:768px) {
-//     h3 ,h4{
-//       font-size: 17px;
-//       font-weight: 500;
-//       white-space:nowrap ;
-//     }
-//       p{
-//           font-size: 20px;
-//           font-weight: 300;
-//       }
-//       ::placeholder{
-//           font-size: 10px;
-//           font-weight: 500;
-//       }
-//       button{
-//         font-size: 15px;
-//         font-weight: 500;
-        
-//       }
-// }
+@media (max-width:768px) {
+   
+      ::placeholder{
+          font-size: 10px;
+          font-weight: 500;
+      }
+}
+@media (min-width:768px) {
+  ::placeholder{
+      font-size: 8px;
+      font-weight: 500;
+  }  
+}

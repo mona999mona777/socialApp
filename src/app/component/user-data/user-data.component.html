@@ -168,18 +168,32 @@
           class="creat-post mb-5 bg-white p-5 rounded-md dark:bg-[#1C1C1D] dark:border dark:border-gray-700"
         >
           <!-- Modal toggle -->
-          @if (userdata) {
-          <input
-            readonly
-            (click)="showcreatemodal()"
-            type="text"
-            data-modal-target="authentication-modal"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-[#1C1C1D] dark:text-white"
-            placeholder="{{ 'authenmodal.what`s on your mind' | translate }}, {{
-              userdata.name
-            }} {{ 'authenmodal.?' | translate }}"
-          />
-          }
+          <div class="hidden lg:block">
+            @if (userdata) {
+            <input
+              readonly
+              (click)="showcreatemodal()"
+              type="text"
+              data-modal-target="authentication-modal"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-[#1C1C1D] dark:text-white"
+              placeholder="{{
+                'authenmodal.what`s on your mind' | translate
+              }}, {{ userdata.name }} {{ 'authenmodal.?' | translate }}"
+            />
+            }
+          </div>
+          <div class="lg:hidden">
+            <input
+              readonly
+              (click)="showcreatemodal()"
+              type="text"
+              data-modal-target="authentication-modal"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-[#1C1C1D] dark:text-white"
+              placeholder="{{ 'authenmodal.what`s on your mind' | translate }}{{
+                'authenmodal.?' | translate
+              }}"
+            />
+          </div>
           <!-- Main modal -->
           <div
             id="authentication-modal"
