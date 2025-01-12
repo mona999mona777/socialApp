@@ -28,7 +28,7 @@ private readonly _Renderer2=inject(Renderer2);
  isloading:boolean=false;
  unsub!:Subscription;
 register:FormGroup=this._FormBuilder.group({
-name:[null,[Validators.required, Validators.minLength(2),Validators.maxLength(20)]],
+name:[null,[Validators.required, Validators.minLength(2),Validators.maxLength(30)]],
 email:[null,[Validators.required, Validators.email]],
 password:[null,[Validators.required,Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/)]],
 rePassword:[null],
