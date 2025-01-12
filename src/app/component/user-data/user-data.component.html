@@ -14,68 +14,51 @@
         }
       </div>
     </div>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 px-8 p-5">
-      <div
-        class="flex flex-wrap justify-between items-center max-w-screen-xl ms-44"
-      >
-        <a class="flex items-center space-x-3 rtl:space-x-reverse">
-          @if (userdata) {
-          <img
-            routerLink="/ProfileImage"
-            [src]="userdata.photo"
-            [alt]="userdata.name"
-            class="image-width absolute top-64 left-10 rtl:right-10"
-          />
-          }
-          <div
-            class="user-data self-center font-semibold whitespace-nowrap dark:text-white"
-          >
-            @if (userdata) {
-            <h2 class="font-bold text-2xl dark:text-white">
-              {{ userdata.name }}
-            </h2>
-            }
-            <p class="font-light text-gray-700 text-sm dark:text-white">
-              {{ "user.0 Freinds" | translate }}
-            </p>
-          </div>
-        </a>
-        <ul
-          class="flex items-center justify-between space-x-3 rtl:space-x-reverse mt-3 md:mt-0"
-        >
-          <li>
-            <a>
-              <button
-                type="button"
-                class="text-white fonts bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:text-white"
-              >
-                {{ "user.AddStory" | translate }}
-              </button>
-            </a>
-          </li>
-
-          <li>
-            <a>
-              <button
-                type="button"
-                class="text-black fonts bg-gray-100 hover:bg-gray-200 focus:outline-none rounded-lg w-full sm:w-auto px-3 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:text-white"
-              >
-                {{ "user.EditProfile" | translate }}
-              </button>
-            </a>
-          </li>
-          <li>
-            <a>
-              <button
-                type="button"
-                class="text-black fonts bg-gray-100 hover:bg-gray-200 focus:outline-none rounded-lg w-full sm:w-auto px-3 py-1 font-light text-center dark:bg-gray-600 dark:hover:bg-gray-700"
-              >
-                <i class="fa-solid fa-caret-down text-sm"></i>
-              </button>
-            </a>
-          </li>
-        </ul>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      @if (userdata) {
+      <img
+        routerLink="/ProfileImage"
+        [src]="userdata.photo"
+        [alt]="userdata.name"
+        class="image-width absolute top-64 ltr:left-10 rtl:right-10"
+      />
+      }
+      <div class="text-start pt-3 w-1/2 mx-auto">
+        @if (userdata) {
+        <h2 class="font-bold dark:text-white">
+          {{ userdata.name }}
+        </h2>
+        }
+        <p class="font-light text-gray-700 text-sm dark:text-white">
+          {{ "user.0 Freinds" | translate }}
+        </p>
       </div>
+      <ul class="flex items-center justify-end pb-3">
+        <li class="mx-2">
+          <button
+            type="button"
+            class="text-white fonts bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-3 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:text-white"
+          >
+            {{ "user.AddStory" | translate }}
+          </button>
+        </li>
+        <li class="mx-2">
+          <button
+            type="button"
+            class="text-black fonts bg-gray-100 hover:bg-gray-200 focus:outline-none rounded-lg w-full sm:w-auto px-3 py-2 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:text-white"
+          >
+            {{ "user.EditProfile" | translate }}
+          </button>
+        </li>
+        <li class="mx-2">
+          <button
+            type="button"
+            class="text-black fonts bg-gray-100 hover:bg-gray-200 focus:outline-none rounded-lg w-full sm:w-auto px-3 py-1 font-light text-center dark:bg-gray-600 dark:hover:bg-gray-700"
+          >
+            <i class="fa-solid fa-caret-down text-sm"></i>
+          </button>
+        </li>
+      </ul>
     </nav>
     <nav class="bg-gray-50 dark:bg-gray-700">
       <div class="max-w-screen-xl px-4 py-3 mx-auto">
@@ -83,58 +66,41 @@
           <ul
             class="flex flex-row items-center w-1/2 justify-between mt-0 rtl:space-x-reverse text-sm"
           >
-            <li>
-              <a
-                class="text-gray-900 dark:text-white fonts"
-                routerLink="/user"
-                routerLinkActive="active "
-                >{{ "user.Posts" | translate }}</a
-              >
+            <li
+              class="text-blue-600 fonts"
+              routerLink="/user"
+              routerLinkActive="active "
+            >
+              {{ "user.Posts" | translate }}
             </li>
-            <li>
-              <a class="text-gray-900 dark:text-white fonts hidden md:block">{{
-                "user.About" | translate
-              }}</a>
+            <li class="text-gray-900 dark:text-white fonts hidden md:block">
+              {{ "user.About" | translate }}
             </li>
-            <li>
-              <a class="text-gray-900 dark:text-white fonts hidden md:block">{{
-                "user.Friends" | translate
-              }}</a>
+            <li class="text-gray-900 dark:text-white fonts hidden md:block">
+              {{ "user.Friends" | translate }}
             </li>
-            <li>
-              <a class="text-gray-900 dark:text-white fonts hidden md:block">{{
-                "user.Photos" | translate
-              }}</a>
+            <li class="text-gray-900 dark:text-white fonts hidden md:block">
+              {{ "user.Photos" | translate }}
             </li>
-            <li>
-              <a class="text-gray-900 dark:text-white fonts hidden lg:block">{{
-                "user.Vedios" | translate
-              }}</a>
+            <li class="text-gray-900 dark:text-white fonts hidden lg:block">
+              {{ "user.Vedios" | translate }}
             </li>
-            <li>
-              <a class="text-gray-900 dark:text-white fonts hidden lg:block">{{
-                "user.Reals" | translate
-              }}</a>
+            <li class="text-gray-900 dark:text-white fonts hidden lg:block">
+              {{ "user.Reals" | translate }}
             </li>
-            <li>
-              <a class="text-gray-900 dark:text-white fonts hidden lg:block">
-                {{ "user.More" | translate }}
-                <i class="fa-solid fa-caret-down text-sm"></i>
-              </a>
+            <li class="text-gray-900 dark:text-white fonts hidden lg:block">
+              {{ "user.More" | translate }}
+              <i class="fa-solid fa-caret-down text-sm"></i>
             </li>
           </ul>
           <ul
             class="flex flex-row items-center justify-end w-1/2 mt-0 rtl:space-x-reverse text-sm"
           >
-            <li routerLink="/ChangePassword">
-              <a class="text-blue-400 fonts mx-5">
-                {{ "user.Change Password" | translate }}
-              </a>
+            <li routerLink="/ChangePassword" class="text-blue-400 fonts mx-5">
+              {{ "user.Change Password" | translate }}
             </li>
-            <li (click)="logout()">
-              <a class="text-rose-400 fonts mx-5">
-                {{ "user.Logout" | translate }}
-              </a>
+            <li (click)="logout()" class="text-rose-400 fonts mx-5">
+              {{ "user.Logout" | translate }}
             </li>
           </ul>
         </div>
@@ -172,14 +138,14 @@
         <div
           class="photos px-5 p-2 mt-5 rounded-lg bg-white py-2 dark:bg-[#1C1C1D] dark:border dark:border-gray-700"
         >
-          <h3 class="font-bold my-2 text-lg dark:text-white">
+          <h3 class="font-bold my-2 dark:text-white">
             {{ "user.Photos" | translate }}
           </h3>
           <div class="flex items-center flex-wrap overflow-hidden gap-2">
             @if (userdata) {
             <img
               (click)="open(userdata.photo)"
-              class="w-[150px] p-2 rounded-xl shadow-lg border border-zinc-400"
+              class="w-photos p-2 rounded-xl shadow-lg border border-zinc-400"
               [src]="userdata.photo"
               [alt]="userdata.name"
             />
@@ -187,7 +153,7 @@
             (item.image) {
             <img
               (click)="open(item.image)"
-              class="w-[150px] p-2 rounded-xl shadow-lg border border-zinc-400"
+              class="w-photos p-2 rounded-xl shadow-lg border border-zinc-400"
               [src]="item.image"
               alt="post image"
             />
@@ -220,9 +186,9 @@
             tabindex="-1"
             aria-hidden="true"
             data-modal-backdrop="static-modal"
-            class="bg-dark hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 bottom-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 bottom-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
           >
-            <div class="relative p-4 w-1/2 max-h-full">
+            <div class="relative p-4 modal-width max-h-full">
               <!-- Modal content -->
               <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                 <!-- Modal header -->
@@ -304,8 +270,10 @@
                                 | translate
                             }}</span>
                           </p>
-                          <p class="text-xs text-gray-500 dark:text-gray-400">
-                            SVG, PNG, JPG or GIF (MAX. 800x400px)
+                          <p
+                            class="text-xs text-center text-gray-500 dark:text-gray-400"
+                          >
+                            PNG, JPG or JPEG (MAX. 800x400px)
                           </p>
                         </div>
                         <input
@@ -402,7 +370,7 @@
                   data-modal-backdrop="static-modal"
                   class="bg-dark hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
                 >
-                  <div class="relative p-4 w-1/2 max-h-full">
+                  <div class="relative p-4 modal-width max-h-full">
                     <!--update Modal content -->
                     <div
                       class="relative bg-white rounded-lg shadow dark:bg-gray-700"
@@ -486,9 +454,9 @@
                                   }}</span>
                                 </p>
                                 <p
-                                  class="text-xs text-gray-500 dark:text-gray-400"
+                                  class="text-xs text-center text-gray-500 dark:text-gray-400"
                                 >
-                                  SVG, PNG, JPG or GIF (MAX. 800x400px)
+                                  PNG, JPG or JPEG (MAX. 800x400px)
                                 </p>
                               </div>
                               <input

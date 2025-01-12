@@ -14,13 +14,18 @@
       src="./assets/images/okey.png"
       alt="not found imag"
     />
-    <P>
-      <a (click)="back()" class="text-blue-700 hover:underline mx-5"
-        >{{ "notfound.go back to the previous page" | translate }}
-      </a>
-      <a class="text-blue-700 hover:underline mx-5">{{
-        "notfound.Visit Our Help Center" | translate
-      }}</a></P
-    >
+
+    <div class="links">
+      <p>
+        <a (click)="back()" class="text-blue-600 underline mx-5"
+          >{{ "notfound.go back to the previous page" | translate }}
+        </a>
+      </p>
+      <p>
+        <a class="text-blue-600 underline mx-5">{{
+          "notfound.Visit Our Help Center" | translate
+        }}</a>
+      </p>
+    </div>
   </div>
 </section>

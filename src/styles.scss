@@ -10,12 +10,6 @@ i{
     font-size: 30px;
     color: rgb(170, 169, 169);
 }
-.image-width{
-width: 150px;
-height: 150px;
-border-radius: 50%;
-border: rgb(221, 217, 217) solid 5px;
-}
 .font-logo{
     font-size: 40px;
 }
@@ -32,7 +26,7 @@ cursor:pointer;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0,0,0);
+    background-color: rgba(0,0,0,0.7);
     z-index: 999999;
     
 }
@@ -48,23 +42,4 @@ button , li , a ,body{
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
-}
-
-  @media (max-width:768px) {
-    .fonts{
-        font-size: 13px !important;
-        font-weight: 500 !important;
-      }
-}
-@media (min-width:768px) {
-    .fonts{
-        font-size: 12px !important;
-        font-weight: 500 !important;
-      }
-}
-@media (min-width:992px) {
-    .fonts{
-        font-size: 15px !important;
-        font-weight: 500 !important;
-      }
 }

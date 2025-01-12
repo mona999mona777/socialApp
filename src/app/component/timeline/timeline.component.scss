@@ -1,0 +1,18 @@
+.icona-botton{
+    width: 25px;
+    height: 25px;
+    border: solid white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .wraping{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width:768px) {
+    .wraping{
+        flex-wrap: nowrap;
+    }
+}
