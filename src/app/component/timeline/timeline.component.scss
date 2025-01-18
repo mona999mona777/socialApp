@@ -16,3 +16,120 @@
         flex-wrap: nowrap;
     }
 }
+.btn-word1 {
+    font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    color: rgb(6, 6, 139);
+    text-align: center;
+border: solid gray 2px;
+    position: absolute;
+    top: 100%;
+    // right: 0;
+right:-90%;
+    width: 130px;
+    display: none;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+  }
+  .nav-iteames1:hover .btn-word1 {
+    display: block;
+  }
+  .btn-word2{
+   font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    color: rgb(6, 6, 139);
+    text-align: center;
+border: solid gray 2px;
+    position: absolute;
+    top: 100%;
+    // right: 0;
+right:-90%;
+    width: 80px;
+    display: none;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+  }
+  .nav-iteames2:hover .btn-word2 {
+    display: block;
+  }
+  .btn-word3{
+   font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    color: rgb(6, 6, 139);
+    text-align: center;
+border: solid gray 2px;
+    position: absolute;
+    top: 100%;
+    // right: 0;
+right:-90%;
+    width: 80px;
+    display: none;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+  }
+  .nav-iteames3:hover .btn-word3 {
+    display: block;
+  }.btn-word4 {
+   font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    color: rgb(6, 6, 139);
+    text-align: center;
+border: solid gray 2px;
+    position: absolute;
+    top: 100%;
+    // right: 0;
+right:-90%;
+    width: 100px;
+    display: none;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+  }
+  .nav-iteames4:hover .btn-word4{
+    display: block;
+  }.btn-word5 {
+   font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    color: rgb(6, 6, 139);
+    text-align: center;
+border: solid gray 2px;
+    position: absolute;
+    top: 100%;
+    // right: 0;
+right:-90%;
+    width: 80px;
+    display: none;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+  }
+  .nav-iteames5:hover .btn-word5 {
+    display: block;
+  }.btn-word6 {
+   font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    color: rgb(6, 6, 139);
+    text-align: center;
+border: solid gray 2px;
+    position: absolute;
+    top: 100%;
+    // right: 0;
+right:-90%;
+    width: 160px;
+    display: none;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+  }
+  .nav-iteames6:hover .btn-word6 {
+    display: block;
+  }

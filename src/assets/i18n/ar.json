@@ -9,7 +9,13 @@
      "off":"متوقف",
      "on":"قيد التشغيل",
      "Use System Setting":"إستخدام إعدادات الجهاز",
-     "logout":"تسجيل الخروج"
+     "logout":"تسجيل الخروج",
+     "home":"الصفحة الرئيسية",
+     "Freinds":"الأصدقاء",
+     "vedio":"فيديو",
+     "Marketplace":"Marketplace",
+     "groups":"مجموعات",
+     "account":"الحساب و الأعدادات"
     },
     "authenmodal":{
      "Add New Post":"إنشاء منشور",

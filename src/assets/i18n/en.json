@@ -9,7 +9,13 @@
     "off":"Off",
     "on":"On",
     "Use System Setting":"Use System Setting",
-    "logout":"Logout"
+    "logout":"Logout",
+    "home":"Home",
+    "Freinds":"Freinds",
+     "vedio":"Vedio",
+     "Marketplace":"Marketplace",
+     "groups":"Groups",
+     "account":"Account and setting"
    },
    "authenmodal":{
     "Add New Post":"Add New Post",
